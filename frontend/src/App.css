@@ -1,34 +1,168 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Portfolio Custom Styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Base styles */
+* {
+  box-sizing: border-box;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+              'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
+              'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1c1b;
+  color: #d9fb06;
+  line-height: 1.6;
 }
 
-.App-link {
-    color: #61dafb;
+/* Typography Classes - Pixel Pushers Style */
+.brand-display { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(3rem, 5.2571rem + 3.0476vw, 6rem); 
+  line-height: 0.9; 
+  color: #d9fb06;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.heading-2 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(2.5rem, 3.4902rem + 2.0915vw, 4rem); 
+  line-height: 0.9; 
+  text-transform: uppercase;
+}
+
+.heading-4 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1.5rem; 
+  line-height: 1.2; 
+}
+
+.heading-5 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1.2rem; 
+  line-height: 1.2; 
+}
+
+.body-large { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 400; 
+  font-size: 1.25rem; 
+  line-height: 1.5; 
+  color: #d9fb06; 
+}
+
+.nav-link {
+  color: #d9fb06;
+  text-decoration: none;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: rgba(217, 251, 6, 0.8);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: #d9fb06;
+  color: #1a1c1b;
+  border: none;
+  border-radius: 50px;
+  padding: 1em 2em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background: #1a1c1b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 80px;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 864px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+  
+  .brand-display {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+  
+  .heading-2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f4816;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9fb06;
 }
